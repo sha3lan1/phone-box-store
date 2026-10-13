@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHONE BOX | صندوق الهواتف - إكسسوارات الموبايل الأحدث</title>
+    <meta name="description" content="متجر PHONE BOX لإكسسوارات الهواتف الذكية، الشواحن، الكابلات، السماعات، ومنتجات MagSafe بأعلى جودة.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-zinc-800 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-zinc-900 border-b border-zinc-800 py-2 px-4 text-center text-xs text-zinc-400">
+        <span>توصيل سريع ومتوفر للطلب الفوري عبر واتساب | خدمة العملاء: 962799350131+</span>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-white text-zinc-950 flex items-center justify-center font-black text-xl tracking-tighter shadow-lg group-hover:scale-105 transition-transform">
+                    PB
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-wider text-white">PHONE BOX</span>
+                    <span class="text-[10px] tracking-widest text-zinc-400 uppercase">صندوق الهواتف</span>
+                </div>
+            </a>
+
+            <!-- Search Bar (Desktop) -->
+            <div class="hidden md:flex flex-1 max-w-md relative">
+                <input type="text" id="searchInput" placeholder="ابحث عن منتج، ماركة، أو موديل..." 
+                    class="w-full bg-zinc-900 border border-zinc-800 rounded-full py-2.5 px-4 pr-11 text-sm text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-zinc-500 transition-colors">
+                <i class="fa-solid fa-magnifying-glass absolute right-4 top-3.5 text-zinc-500 text-sm"></i>
+            </div>
+
+            <!-- Actions / WhatsApp Quick CTA -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/962799350131?text=مرحباً، أستفسر عن منتجات متجر Phone Box" target="_blank" rel="noopener noreferrer"
+                    class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 transition-colors shadow-lg shadow-emerald-900/20">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">تواصل واتساب</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Search Bar -->
+        <div class="md:hidden px-4 pb-3">
+            <div class="relative w-full">
+                <input type="text" id="mobileSearchInput" placeholder="ابحث عن منتج، ماركة، أو موديل..." 
+                    class="w-full bg-zinc-900 border border-zinc-800 rounded-full py-2 px-4 pr-10 text-sm text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-zinc-500">
+                <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3 text-zinc-500 text-xs"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-zinc-900 to-zinc-950 py-16 px-4 border-b border-zinc-800/60 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6 text-right">
+                <div class="inline-flex items-center gap-2 bg-zinc-800/80 border border-zinc-700/50 px-3 py-1 rounded-full text-xs text-zinc-300">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    تشكيلة واسعة من إكسسوارات الموبايل الأصلية
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-black tracking-tight leading-tight text-white">
+                    إكسسوارات هواتف متطورة<br><span class="text-zinc-400">بمعايير أصلية وجودة عالية</span>
+                </h1>
+                <p class="text-zinc-400 text-base max-w-lg leading-relaxed">
+                    اكتشف تشكيلتنا الاحترافية من الشواحن السريعة، الكابلات المتينة، سماعات الترو وايرلس، ومنتجات MagSafe المصممة لتناسب أجهزتك بدقة.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#catalog" class="bg-white text-zinc-950 hover:bg-zinc-200 font-semibold px-6 py-3 rounded-full text-sm transition-colors shadow-lg">
+                        تصفح المنتجات
+                    </a>
+                    <a href="https://wa.me/962799350131?text=مرحباً، أود الاستفسار عن توفر منتجات معينة" target="_blank"
+                        class="bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-white font-medium px-6 py-3 rounded-full text-sm transition-colors">
+                        استفسر عبر واتساب
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="w-full max-w-md h-72 sm:h-80 bg-gradient-to-tr from-zinc-900 to-zinc-800 rounded-3xl border border-zinc-700/40 p-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-zinc-700/20 rounded-full blur-2xl"></div>
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs uppercase tracking-widest text-zinc-400 font-bold">PHONE BOX STORE</span>
+                        <i class="fa-solid fa-shield-halved text-zinc-400 text-xl"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-2xl font-bold text-white">تشكيلة 22 قسماً متكاملاً</div>
+                        <p class="text-xs text-zinc-400">JOYROOM • WIWU • Anker • UGREEN • Apple • Samsung والمزيد</p>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-emerald-400 font-medium">
+                        <i class="fa-solid fa-check-circle"></i> طلبات فورية عبر واتساب دون تعقيد
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content & Catalog Section -->
+    <main id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Filter & Navigation Bar -->
+        <div class="space-y-6 mb-10">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-800 pb-6">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight text-white">الكاتلوج الشامل</h2>
+                    <p class="text-xs text-zinc-400 mt-1">اختر القسم أو الماركة لتصفية المنتجات فورياً</p>
+                </div>
+                <!-- Brand Quick Filter Tabs -->
+                <div id="brandFilters" class="flex flex-wrap gap-2">
+                    <button data-brand="all" class="brand-btn active bg-white text-zinc-950 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors">الكل</button>
+                    <button data-brand="JOYROOM" class="brand-btn bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors">JOYROOM</button>
+                    <button data-brand="WIWU" class="brand-btn bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors">WIWU</button>
+                    <button data-brand="Anker" class="brand-btn bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors">Anker</button>
+                    <button data-brand="UGREEN" class="brand-btn bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors">UGREEN</button>
+                    <button data-brand="Apple" class="brand-btn bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors">Apple</button>
+                </div>
+            </div>
+
+            <!-- Categories Horizontal Slider / Grid (22 Groups) -->
+            <div>
+                <div class="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3">الأقسام الرئيسية (22 مجموعة)</div>
+                <div id="categoryFilters" class="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-zinc-800">
+                    <button data-category="all" class="cat-pill active whitespace-nowrap bg-zinc-200 text-zinc-950 px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0">
+                        جميع الأقسام
+                    </button>
+                    <!-- Dynamically populated category pills -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Products injected dynamically via JavaScript -->
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div id="emptyState" class="hidden text-center py-20">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-500 text-xl">
+                <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">لم يتم العثور على منتجات مطابقة</h3>
+            <p class="text-xs text-zinc-400 mt-1">جرب البحث بكلمات أخرى أو قم بإلغاء التصفية الحالية.</p>
+            <button id="resetFiltersBtn" class="mt-4 bg-zinc-900 hover:bg-zinc-800 text-white px-4 py-2 rounded-xl text-xs font-medium border border-zinc-800 transition-colors">
+                إعادة ضبط البحث
+            </button>
+        </div>
+    </main>
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+            <button id="closeModalBtn" class="absolute top-4 left-4 z-10 w-9 h-9 rounded-full bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalContent" class="p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+                <!-- Modal content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 border-t border-zinc-800 mt-20 py-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-right">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-white text-zinc-950 flex items-center justify-center font-bold text-sm">PB</div>
+                    <span class="text-base font-bold text-white">PHONE BOX</span>
+                </div>
+                <p class="text-xs text-zinc-400 leading-relaxed">
+                    وجهتك الموثوقة لأحدث إكسسوارات الهواتف الذكية، الشواحن الأصلية، والمنتجات عالية الأداء في الأردن.
+                </p>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold text-white uppercase tracking-wider">معلومات التواصل</h4>
+                <p class="text-xs text-zinc-400"><i class="fa-solid fa-phone ml-2 text-zinc-500"></i> هاتف / واتساب: 962799350131+</p>
+                <p class="text-xs text-zinc-400"><i class="fa-solid fa-location-dot ml-2 text-zinc-500"></i> الأردن - عمان</p>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold text-white uppercase tracking-wider">روابط سريعة</h4>
+                <div class="flex flex-col gap-2 text-xs text-zinc-400">
+                    <a href="#catalog" class="hover:text-white transition-colors">الكاتلوج العام</a>
+                    <a href="https://wa.me/962799350131" target="_blank" class="hover:text-white transition-colors">الطلب والاستفسار عبر واتساب</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-zinc-800/80 mt-8 pt-6 text-center text-[11px] text-zinc-500">
+            جميع الحقوق محفوظة &copy; 2026 PHONE BOX. تم التطوير وفق معايير الجودة العالية.
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
