@@ -1,4 +1,4 @@
-// Phone Box Store - Application Logic
+// Phone Box Store - Application Logic (Direct Image URLs)
 
 const PRODUCTS = [
     {
@@ -7,7 +7,7 @@ const PRODUCTS = [
         category: "شواحن جدارية",
         brand: "JOYROOM",
         price: "12.00",
-        image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=80",
         description: "شاحن جداري سريع بقدرة 20 واط يدعم تقنية PD لشحن الآيفون والأجهزة الحديثة بأعلى أمان وسرعة."
     },
     {
@@ -16,7 +16,7 @@ const PRODUCTS = [
         category: "سماعات بلوتوث",
         brand: "Anker",
         price: "22.00",
-        image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80",
         description: "سماعات داخل الأذن لاسلكية مع صوت نقي، باس قوي، ومقاومة للماء IPX5 مع بطارية تدوم حتى 30 ساعة."
     },
     {
@@ -25,7 +25,7 @@ const PRODUCTS = [
         category: "كابلات ووصلات",
         brand: "UGREEN",
         price: "8.50",
-        image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600&auto=format&fit=crop&q=80",
         description: "كابل شحن ونقل بيانات مضفر بالألياف المقواة معتمد من Apple مع حماية ضد الإنحناء والقطع."
     },
     {
@@ -34,7 +34,7 @@ const PRODUCTS = [
         category: "باور بانك وشواحن متنقلة",
         brand: "WIWU",
         price: "25.00",
-        image: "https://images.unsplash.com/photo-1609592424074-be4816c483d7?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1609592424074-be4816c483d7?w=600&auto=format&fit=crop&q=80",
         description: "بنك طاقة لاسلكي يدعم المغناطيس MagSafe لشحن هواتف آيفون أثناء التنقل بكل سهولة."
     },
     {
@@ -43,7 +43,7 @@ const PRODUCTS = [
         category: "شاشات حماية وكفرات",
         brand: "Apple",
         price: "5.00",
-        image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600&auto=format&fit=crop&q=80",
         description: "حماية زجاجية حرارية مضادة للبصمات والخدوش بتغطية كاملة وحواف منحنية لجميع الموديلات."
     },
     {
@@ -52,7 +52,7 @@ const PRODUCTS = [
         category: "مستلزمات سيارات",
         brand: "JOYROOM",
         price: "18.00",
-        image: "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=600&auto=format&fit=crop&q=80",
         description: "حامل جوال الذكي لفتحات التكييف بالسيارة يفتح ويغلق تلقائياً بمستشعر حركة مع شحن سريع."
     }
 ];
@@ -122,7 +122,6 @@ function renderProducts() {
         card.innerHTML = `
             <div class="relative h-48 bg-zinc-950 overflow-hidden cursor-pointer" onclick="openProductModal('${p.id}')">
                 <img src="${p.image}" alt="${p.title}" 
-                    onerror="this.src='placeholder.svg'"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-zinc-300 border border-zinc-800 text-[10px] font-bold px-2.5 py-1 rounded-full">
                     ${p.brand}
@@ -151,7 +150,6 @@ function renderProducts() {
 }
 
 function initEventListeners() {
-    // Search inputs
     const searchInput = document.getElementById("searchInput");
     const mobileSearchInput = document.getElementById("mobileSearchInput");
 
@@ -163,7 +161,6 @@ function initEventListeners() {
     if (searchInput) searchInput.addEventListener("input", handleSearch);
     if (mobileSearchInput) mobileSearchInput.addEventListener("input", handleSearch);
 
-    // Brand buttons
     const brandBtns = document.querySelectorAll(".brand-btn");
     brandBtns.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -179,7 +176,6 @@ function initEventListeners() {
         });
     });
 
-    // Category pills
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("cat-pill")) {
             const pills = document.querySelectorAll(".cat-pill");
@@ -195,7 +191,6 @@ function initEventListeners() {
         }
     });
 
-    // Reset filters
     const resetBtn = document.getElementById("resetFiltersBtn");
     if (resetBtn) {
         resetBtn.addEventListener("click", () => {
@@ -208,7 +203,6 @@ function initEventListeners() {
         });
     }
 
-    // Modal listeners
     const closeModalBtn = document.getElementById("closeModalBtn");
     const productModal = document.getElementById("productModal");
 
@@ -233,9 +227,7 @@ function openProductModal(productId) {
     modalContent.innerHTML = `
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
             <div class="h-64 bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800">
-                <img src="${product.image}" alt="${product.title}" 
-                    onerror="this.src='placeholder.svg'"
-                    class="w-full h-full object-cover">
+                <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover">
             </div>
             <div class="space-y-4 text-right">
                 <span class="bg-zinc-800 text-zinc-300 text-xs px-3 py-1 rounded-full border border-zinc-700">${product.brand}</span>
